@@ -18,25 +18,25 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
 
-                <petclinic:menuItem active="${name eq 'home'}" url="/" title="головна">
+                <petclinic:menuItem active="${name eq 'home'}" url="/" title="home page">
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                    <span>Головна</span>
+                    <span>Home</span>
                 </petclinic:menuItem>
 
-                <petclinic:menuItem active="${name eq 'owners'}" url="/owners/find.html" title="знайти хазяїв">
+                <petclinic:menuItem active="${name eq 'owners'}" url="/owners/find.html" title="find owners">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    <span>Знайти хазяїв</span>
+                    <span>Find owners</span>
                 </petclinic:menuItem>
 
-                <petclinic:menuItem active="${name eq 'vets'}" url="/vets.html" title="ветеренари">
+                <petclinic:menuItem active="${name eq 'vets'}" url="/vets.html" title="veterinarians">
                     <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
-                    <span>Ветеренари</span>
+                    <span>Veterinarians</span>
                 </petclinic:menuItem>
 
                 <petclinic:menuItem active="${name eq 'error'}" url="/oups.html"
                             title="trigger a RuntimeException to see how it is handled">
                     <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-                    <span>Помилка</span>
+                    <span>Error</span>
                 </petclinic:menuItem>
 
             </ul>
