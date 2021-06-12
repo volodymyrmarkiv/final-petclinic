@@ -18,17 +18,17 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
 
-                <petclinic:menuItem active="${name eq 'home'}" url="/" title="home page">
+                <petclinic:menuItem active="${name eq 'home'}" url="/" title="головна">
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                     <span>Головна</span>
                 </petclinic:menuItem>
 
-                <petclinic:menuItem active="${name eq 'owners'}" url="/owners/find.html" title="find owners">
+                <petclinic:menuItem active="${name eq 'owners'}" url="/owners/find.html" title="знайти хазяїв">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                     <span>Знайти хазяїв</span>
                 </petclinic:menuItem>
 
-                <petclinic:menuItem active="${name eq 'vets'}" url="/vets.html" title="veterinarians">
+                <petclinic:menuItem active="${name eq 'vets'}" url="/vets.html" title="ветеренари">
                     <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
                     <span>Ветеренари</span>
                 </petclinic:menuItem>
