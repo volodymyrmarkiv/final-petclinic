@@ -1,19 +1,23 @@
 pipeline {
 
+    triggers {
+        githubPush()
+    }
+
     agent {
         node {
             label 'build'
         }
     }
 
-    tools {
+    tools { 
         maven 'maven-3.0.5'
-        jdk 'java-1.8'
+        jdk 'java-1.8.0'
     }
 
     options {
-        buildDiscarder logRotator(
-                    daysToKeepStr: '10',
+        buildDiscarder logRotator( 
+                    daysToKeepStr: '10', 
                     numToKeepStr: '5'
             )
     }
@@ -26,7 +30,7 @@ pipeline {
     }
 
     stages {
-
+        
         stage('Cleanup Workspace') {
             steps {
                 cleanWs()
@@ -45,9 +49,9 @@ pipeline {
             }
         }
 
-        stage('Integration testing') {
+        stage('Testing') {
             steps {
-                sh "mvn clean verify sonar:sonar -Dsonar.login=ec251c0313bd0ff3039bb2bcf84781cf0dbe2291"
+                sh "mvn clean verify sonar:sonar -Dsonar.login=5da0e763d3a08c1006b50ebdf443eb15a827edbc"
             }
         }
 
@@ -63,13 +67,6 @@ pipeline {
                 }
             }
         }
-        stage('Priting All Global Variables') {
-            steps {
-                sh """
-                env
-                """
-            }
-        }
 
-    }
+    }   
 }
