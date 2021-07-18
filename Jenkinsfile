@@ -51,7 +51,7 @@ pipeline {
 
         stage('Testing') {
             steps {
-                sh "mvn clean verify sonar:sonar -Dsonar.login=5da0e763d3a08c1006b50ebdf443eb15a827edbc"
+                sh "mvn clean verify sonar:sonar -Dsonar.login=3e4103c1f3e597a2552f0c85060b6c28fdcac80e"
             }
         }
 
